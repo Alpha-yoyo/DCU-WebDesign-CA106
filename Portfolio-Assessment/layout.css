@@ -1,0 +1,261 @@
+/* These are some suggested groupings for your stylesheet... */
+
+/* box sizing */
+.content {
+   border-radius: 5px;
+   width: 600px;
+   margin: auto;
+   padding: 40px;
+   padding-left: 300px;
+   padding-right: 300px;
+   background-color: #f2f2f2;
+}
+
+
+/* element styling (e.g. standard p, h1, h2, a, etc) */
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 17px;
+}
+/* credit: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp */
+html {
+	scroll-behavior: smooth;    /* Make it scroll smoothly for the whole page */
+}
+
+
+
+/* flexible content images code */
+
+/* credit: w3schools (https://www.w3schools.com/css/css3_images.asp) */
+div.an-image {
+  width: 80%;
+  background-color: white;             /* configurations for the images */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    /* Gives a shadow effect around the border */
+  margin-bottom: 25px;
+  margin-left: 59px;
+}
+
+div.an-image img {
+  width: 100%;
+  height: auto;
+}
+
+div.image-caption {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+
+
+/* navigation styles */ 
+
+/* credit: https://webdevtrick.com/html-css-navigation-bar/ */
+nav ul {
+  border-radius: 4px;            /* border configurations for the navigation bar */
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+  width: 15%;
+  
+}
+
+nav ul li:hover a::before {
+  right: 0;
+  left: 0;
+}
+
+nav ul li a {
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  position: relative;
+}
+
+nav ul li a:hover { /* When it hovers change the color to red */
+  color: #e74c3c;
+}
+
+nav ul li a::before {
+  content: "";
+  transition: all 0.4s ease-in-out; /* Make it ease in and out, with a duration of 0.4s */
+  position: absolute;                        
+  right: 50%;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background-color: #e74c3c;
+}
+
+nav ul li a:hover::before {
+  right: 0;
+  left: 0;
+}
+ 
+nav ul li {
+	list-style: none;
+}
+
+
+/* page header styles*/
+
+/* credit: https://cssanimation.rocks/animating-hero-header/ */
+header {
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  height: 100vh;
+  justify-content: center;                       /* This is the configurations for the header */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 100px;
+}
+
+header:before {
+  animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)) no-repeat bottom;
+  background-image: url(images/header-background.jpg);
+  background-size: cover;
+  content: "";                                         /* insert the properties/animation before the header */
+  opacity: 0;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  z-index: -1;
+}
+
+header:after {
+  animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background: #ffffff;
+  content: "";
+  height: 40rem;
+  left: -5%;                                        /*insert the properties/animation after the header */
+  position: absolute;
+    right: -5%;
+    top: 90%;
+  transform-origin: 0 0;
+  z-index: 0;
+}
+
+.header-title, .header-subtitle {
+  color: #fff;
+}
+
+.header-subtitle {
+  transform: translateZ(.1px);
+  position: relative;
+  z-index: 10;
+}
+
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;       /* give a pop-in effect */
+  opacity: 0;
+}
+
+.header-content {
+  animation-delay: .6s;           /* Times for the animation delays */
+}
+
+.header-title {
+  animation-delay: .8s;
+}
+
+.header-subtitle {
+  animation-delay: 1.1s;
+}
+
+
+/* Page Header Animations */
+
+/* credit: https://cssanimation.rocks/animating-hero-header/ */
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;            /* Initially it will make content invisible */
+    transform: translateY(-4rem);  
+  }
+  100% {
+    opacity: 1;           /* Make the content visible again */
+    transform: none;
+  }
+}
+
+@keyframes pop-in {      /* Make the elements bounce */
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rotate-up {     /* Animate the wedge */
+  100% {
+    transform: rotateZ(-4deg);
+  }
+}
+
+
+/* main layout */
+
+/* styling for the section content */
+
+/* background colours for sections */
+body {
+   background-color: #ffffff;
+   font-family: Raleway, sans-serif;
+}
+
+
+/* form styling */
+/* credit: w3schools (https://www.w3schools.com/css/css_form.asp) */
+input[id=contact-name], input[id=contact-email], input[id=contact-phone], textarea[id=contact-message] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;                    /* configurations for the name, email, phone number and contact-message */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;               /* configurations for the button */
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;      /* color for the button, make it green */
+}
+
+
+/* footer styling */
+/* credit: w3schools (https://www.w3schools.com/css/css_website_layout.asp) */
+footer {
+  padding: 20px;
+  text-align: center;         /* give it a padding, color ,margin and make text appears in the middle */
+  background: #ddd;
+  margin-top: 1px;
+}
+
