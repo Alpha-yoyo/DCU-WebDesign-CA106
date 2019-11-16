@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Qiyang Zuo's Portfolio" />
+    <!-- meta tag below is used for Internet Explorer and mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--This means that the browser will (probably) render the width of the page at the width of its own screen. //-->
+    <title>Qiyang's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!-- add your stylesheet and any other styling code, e.g. google fonts  a good link is https://fonts.google.com/-->
+	<link rel="stylesheet" href="layout.css" /> 
+</head>
+
+<!-- all the classes below will require some CSS styles to be included in your layout.css file, if you do not
+include a style for these classes you should remove the class from your html file //-->
+<body>
+    <main class= "main-style">
+	    <!-- You could style Main here if you wish-->
+        <nav class="page-nav"> <!-- the navigation part of the page.  Note links just jump to different parts of the page.-->
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#images">Image Gallery</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <header class="page-header">  <!-- What does the header do? The header is used to define the heading for a document or a section, it contains information related to the title and heading of the related content.  see nav above-->
+            <div class="header-content">  <!-- What is a div?  Div is an HTML element that groups other elements of the page together, it is nothing more than a container unit that encapsulates other page elements and divides the HTML document into sections.-->
+                <h1 class="header-title animate-pop-in">Qiyang's Portfolio</h1>
+                <h3 class="header-subtitle animate-pop-in">This is a brief showcase of me!!</h3>
+            </div>
+        </header>
+    <!--Note here the use of an ID.  the link above actually links to this.  It's a good example of where an ID can be used.  Note also that the section has a class attribute.  use this for styling. -->
+        <section id="about" class="about-me ">  <!--What does the section do here?  The section defines sections in a document, such as chapters, headers, footers, or any other sections of the document. -->
+            <div class="container-content">
+                <h2>About Me</h2>
+                <div class="content">
+                <p>Hi, my name is Qiyang Zuo, I'm 18 years old. I was born in China on the 21st of July 2001. I moved to Ireland in 2009 when I was about 8 years old. Now, I'm currently a first-year student studying Computer Applications at Dublin City University. I'm also a member of Redbrick Society. Redbrick is DCU's Computer Networking society.<br> I have a huge interest in technologies since when I was a kid, I have always wanted to make something cool using programming languages. This is why I choose to study Computer Applications in DCU. I'm now one step further to achieving my dreams.</p>    <!-- add your 150 word maximum About Me content here.  Use HTML you know, marks for the HTML.  Marks deducted for poor grammar, spelling errors etc. -->
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work-experience ">
+            <div class="container-content">
+                <h2>Work Experience</h2>
+                <div class="content">
+				    <h3>Hong Kong Chef Restaurant</h3>
+				    <h4>I worked as a waitress, doing the work such as:</h4>
+				    <ul>
+				       <li>Cleaning the tables</li>
+				       <li>Taking orders on the phone</li>
+				       <li>Serving food to customers</li>
+				       <li>Handling customers transactions and counting the cash in the till</li>
+				    </ul>
+				 
+                    <p>I had learned a lot through the past years of working as a waitress, I think it's an important experience for me.
+				    <br> It thought me how to take the initiative and work fast, it also thought me how to deal with customer queries, complaints and handing out a refund if necessary.</p>    <!-- add your 200 word maximum work experience content here.  You can use lists of things as well as paragraphs.  Show off the HTML you know.  marks for the HTML, and how well you use it. marks deducted for poor grammar or spelling errors-->
+                </div>
+            </div>
+        </section>
+
+        <section id="images" class="image-gallery ">
+            <div class="container-content">
+                <h2>Image Gallery</h2>
+                <div class="content">
+                    <div class="an-image">
+                        <img src="images/python.jpg" alt="Python Logo" style="width:100%"><!-- add image one here with 150 word maximum caption.  You may remove the caption if you wish.  Don't forget to use alt tags. -->
+                        <div class="image-caption"> <p>Python is the first programming language that I learn in DCU during Computer Programming lectures.</p> </div>
+                    </div>
+                    <div class="an-image">
+                        <img src="images/swimming.jpg" alt="A person swimming in the sea" style="width:100%"><!-- add image two here with 150 word maximum caption -->
+                        <div class="image-caption"> <p>Swimming is probably one of my favourite type of sports, I do swim a lot during my childhood. My parents would always bring me to the swimming pool during Summer time. We have great fun and memories. </p> </div>
+                    </div>
+                    <div class="an-image">
+                        <img src="images/programming.jpg" alt="A boy sitting infront of Computer Monitor" style="width:100%"><!-- add image three here with 150 word maximum caption -->
+                        <div class="image-caption"> <p>Being a programmer is a dream for me. I've always wanted to be a programmer when I was 10 years old.</p> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-me">
+            <div class="container-content">
+                <h2>Contact Me</h2>
+                <div class="content">
+                    <form action="https://formspree.io/qiyang.zuo2@mail.dcu.ie" method="post">
+	                    <!-- Style this nicely.  Don't worry if the form doesn't work, marks here for how well you style it. -->
+                        <p>
+                            <label for="contact-name">Your Name</label>
+                            <input id="contact-name" type="text" name="contact-name" />
+                        </p>
+                        <p>
+                            <label for="contact-email">Your email address</label>
+                            <input id="contact-email" type="email" name="contact-email" /> </p>
+                        <p>
+                            <label for="contact-phone">Your phone number</label>
+                            <input id="contact-phone" type="tel" name="contact-phone" /> </p>
+                        <p>
+                            <label for="contact-message">Your message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="send my message" /> </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer id = "footer-layout">
+                <p> &copy; <a href="dcu.ie/">DCU 2019-2020</a>
+				<span class="footer-separator">&middot;</span>
+				<span class="footer-text">Qiyang Zuo</span> <span class="footer-separator">&middot;</span> <span class="footer-text">This is student coursework</span> <span class="footer-separator">&middot;</span> <span class="footer-text">Lecturer<a href="http://www.computing.dcu.ie/~jkernan">Jane Kernan</a></span> <span class="footer-separator">&middot;</span> <span class="footer-text">
+     <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a><br/>
+	 
+        </span> </p>
+        <!-- Note that the link to the validator above will only produce results when your page is uploaded to the server, and you click on the link from the browser.-->
+         
+        </footer>
+    </main>
+</body>
+
+</html>
