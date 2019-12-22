@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact Form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="layout.css" /> 
+</head>
+<body>
+    <nav class="page-nav">
+        <ul>
+		   <li><a href="index.html" data-hover="Main">Main<a/></li>
+           <li><a href="china" data-hover="China">China<a/></li>
+           <li><a href="france" data-hover="France">France</a></li>
+           <li><a href="japan" data-hover="Japan">Japan</a></li>
+           <li><a href="ireland" data-hover="Ireland">Ireland</a></li>
+           <li><a href="lithuania" data-hover="Lithuania">Lithuania</a></li>
+	       <li class="current"><a href="contact.html" data-hover="Contact">Contact</a></li>
+        </ul>
+	</nav>
+	<br>
+    <section id="contact" class="contact-me">
+        <div class="container-content">
+            <h2>Contact Me</h2>
+            <div class="content">
+                <form action="https://formspree.io/qiyang.zuo2@mail.dcu.ie" method="post">
+                    <p>
+                        <label for="contact-name">Your Name</label>
+                        <input id="contact-name" type="text" name="contact-name" />
+                    </p>
+                    <p>
+                        <label for="contact-email">Your email address</label>
+                        <input id="contact-email" type="email" name="contact-email" /> 
+				    </p>
+                    <p>
+                        <label for="contact-phone">Your phone number</label>
+                        <input id="contact-phone" type="tel" name="contact-phone" /> 
+					</p>
+                    <p>
+                        <label for="contact-message">Your message</label>
+                        <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                    </p>
+                    <p> <input type="submit" value="send my message" /> </p>
+                    </form>
+            </div>
+        </div>
+    </section>
+</body>
